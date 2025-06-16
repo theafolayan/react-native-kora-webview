@@ -6,7 +6,7 @@ Inspired by the simplicity of `react-native-paystack-webview`, this package adds
 
 ---
 
-## ✨ Features
+## Features
 
 - ✅ Modal-based WebView for KoraPay payments
 - ✅ TypeScript-first design
@@ -17,7 +17,7 @@ Inspired by the simplicity of `react-native-paystack-webview`, this package adds
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ```bash
 npm install react-native-korapay-webview
@@ -74,7 +74,7 @@ export default function App() {
 }
 ```
 
-## 🧾 Props Reference
+## Props Reference
 
 | Prop           | Type                       | Required | Description                                    |
 | :------------- | :------------------------- | :------- | :--------------------------------------------- |
@@ -90,4 +90,19 @@ export default function App() {
 | `onCancel`     | `() => void`               | ❌       | Called when user cancels payment               |
 | `onClose`      | `() => void`               | ❌       | Always called when modal closes                |
 | `customLoader` | `React.ReactNode`          | ❌       | Custom loading UI while WebView loads          |
+
+
+## Use With Custom KoraPay Links
+If you already generate hosted payment links from your backend:
+
+```tsx
+<KoraPayWebView
+  visible={true}
+  customPaymentUrl="https://korapay.com/pay/abc123"
+  onClose={() => setVisible(false)}
+/>
+```
+
+## Security Consideration
+Avoid generating sensitive values like references or metadata in the frontend. Always handle secure logic server-side.
 
