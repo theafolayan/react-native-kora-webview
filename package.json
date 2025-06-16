@@ -1,0 +1,27 @@
+{
+  "name": "react-native-korapay-webview",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=16.8",
+    "react-native": "*",
+    "react-native-webview": "^13.0.0"
+  },
+  "author": {
+    "name": "@theafolayan",
+    "url": "https://github.com/theafolayan"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/react": "*",
+    "@types/react-native": "*",
+    "@types/react-native-webview": "*"
+  },
+  "license": "MIT"
+}
